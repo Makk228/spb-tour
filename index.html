@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экскурсия "От Ломоносова до Кронверкского"</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <span class="nav-brand">Петербургский маршрут</span>
+            <a class="nav-link" href="#authors">Авторы</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <p class="header-eyebrow">Санкт-Петербург · Пешеходный аудиогид</p>
+            <h1>От Ломоносова до Кронверкского</h1>
+            <div class="ornament">
+                <div class="ornament-diamond"></div>
+            </div>
+            <p>Путь сквозь века: от улицы Ломоносова до Кронверкского проспекта через историческое сердце города.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content-grid reveal">
+
+            <section class="map-container">
+                <p class="section-label">Маршрут на карте</p>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1oAtdadU5UYcWlBfUVZkDIhF2QjbYnNc&ehbc=2E312F" width="100%" height="400"></iframe>
+            </section>
+
+            <section class="audio-container">
+                <p class="section-label">Аудиогид</p>
+                <h3 class="timeline-title">Маршрут по точкам</h3>
+
+                <audio id="audio-player" controls>
+                    <source id="audio-source" src="mp3/Вступление_01.mp3" type="audio/mp3">
+                    Ваш браузер не поддерживает воспроизведение аудио.
+                </audio>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item active-track">
+                        <button class="time-link active" onclick="playTrack('mp3/Вступление_01.mp3', this)">01</button>
+                        <span class="timeline-item-label">Введение и начало маршрута</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                    <li class="timeline-item">
+                        <button class="time-link" onclick="playTrack('mp3/Кронверский.mp3', this)">02</button>
+                        <span class="timeline-item-label">Кронверский, 49а</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                    <li class="timeline-item">
+                        <button class="time-link" onclick="playTrack('mp3/Петропавловская крепость_01.mp3', this)">03</button>
+                        <span class="timeline-item-label">Петропавловская крепость</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                    <li class="timeline-item">
+                        <button class="time-link" onclick="playTrack('mp3/Ростралльные колонны_01.mp3', this)">04</button>
+                        <span class="timeline-item-label">Ростральные колонны, стрелка В.О.</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                    <li class="timeline-item">
+                        <button class="time-link" onclick="playTrack('mp3/Кунсткамера_01.mp3', this)">05</button>
+                        <span class="timeline-item-label">Кунсткамера</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                    <li class="timeline-item">
+                        <button class="time-link" onclick="playTrack('mp3/Эрмитаж_01.mp3', this)">06</button>
+                        <span class="timeline-item-label">Эрмитаж</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                    <li class="timeline-item">
+                        <button class="time-link" onclick="playTrack('mp3/Дворцовая площадь_01.mp3', this)">07</button>
+                        <span class="timeline-item-label">Дворцовая площадь, Александровская колонна</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                    <li class="timeline-item">
+                        <button class="time-link" onclick="playTrack('mp3/Дом Зингер_01.mp3', this)">08</button>
+                        <span class="timeline-item-label">Дом Зингер</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                    <li class="timeline-item">
+                        <button class="time-link" onclick="playTrack('mp3/Казанский собор_01.mp3', this)">09</button>
+                        <span class="timeline-item-label">Казанский собор</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                    <li class="timeline-item">
+                        <button class="time-link" onclick="playTrack('mp3/Ломоносова9_01.mp3', this)">10</button>
+                        <span class="timeline-item-label">Ломоносова, 9</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                    <li class="timeline-item">
+                        <button class="time-link" onclick="playTrack('mp3/Заключение_01.mp3', this)">11</button>
+                        <span class="timeline-item-label">Заключение</span>
+                        <span class="playing-bars"><span></span><span></span><span></span></span>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+        <div class="section-divider">
+            <div class="section-divider-inner">
+                <div class="section-divider-dot"></div>
+                <div class="section-divider-dot"></div>
+                <div class="section-divider-dot"></div>
+            </div>
+        </div>
+
+        <section class="landmarks-section">
+            <h2>Точки маршрута</h2>
+            <p class="section-subtitle">9 исторических объектов Санкт-Петербурга</p>
+            <div class="landmarks-grid">
+
+                <a href="pages/kronverksky.html" class="landmark-card-link reveal reveal-d1">
+                <article class="landmark-card">
+                    <div class="card-img-wrap">
+                        <img src="img/ITMO_University's_main_building,_August_2016.jpg" alt="Кронверский, 49а">
+                        <span class="card-number">01</span>
+                    </div>
+                    <div class="landmark-card-content">
+                        <h3>Кронверский, 49а</h3>
+                        <p>Бывший Второй дом городских учреждений, построенный в 1912–1913 годах по проекту М. М. Перетятковича в стиле неоклассицизма. Фасад здания примечателен рустованным цоколем и декоративными букраниями. Сегодня здесь располагается главный корпус Университета ИТМО.</p>
+                    </div>
+                </article>
+                </a>
+
+                <a href="pages/petropavlovsk.html" class="landmark-card-link reveal reveal-d2">
+                <article class="landmark-card">
+                    <div class="card-img-wrap">
+                        <img src="img/petropavl-main-e1596915227647-1536x937.jpg" alt="Петропавловская крепость">
+                        <span class="card-number">02</span>
+                    </div>
+                    <div class="landmark-card-content">
+                        <h3>Петропавловская крепость</h3>
+                        <p>Историческое ядро Санкт-Петербурга, заложенное на Заячьем острове 27 мая 1703 года. Возведённая по бастионной системе Вобана, цитадель ни разу не участвовала в боевых действиях. В её центре — Петропавловский собор со знаменитым 122-метровым золочёным шпилем.</p>
+                    </div>
+                </article>
+                </a>
+
+                <a href="pages/rostral.html" class="landmark-card-link reveal reveal-d3">
+                <article class="landmark-card">
+                    <div class="card-img-wrap">
+                        <img src="img/7ee628d9fce77bdc094ca226314439a9.jpg" alt="Ростральные колонны">
+                        <span class="card-number">03</span>
+                    </div>
+                    <div class="landmark-card-content">
+                        <h3>Ростральные колонны</h3>
+                        <p>Монументальные сооружения на стрелке Васильевского острова, построенные в 1805–1810 годах по проекту Тома де Томона. Колонны украшены носовыми частями кораблей (рострами), символизируя морское могущество государства.</p>
+                    </div>
+                </article>
+                </a>
+
+                <a href="pages/kunstkamera.html" class="landmark-card-link reveal reveal-d1">
+                <article class="landmark-card">
+                    <div class="card-img-wrap">
+                        <img src="img/img_5cdb340119dc0.png" alt="Кунсткамера">
+                        <span class="card-number">04</span>
+                    </div>
+                    <div class="landmark-card-content">
+                        <h3>Кунсткамера</h3>
+                        <p>Первый публичный музей России, основанный Петром I в 1714 году. Здание на Университетской набережной построено в стиле петровского барокко и увенчано многоярусной башней с армиллярной сферой.</p>
+                    </div>
+                </article>
+                </a>
+
+                <a href="pages/hermitage.html" class="landmark-card-link reveal reveal-d2">
+                <article class="landmark-card">
+                    <div class="card-img-wrap">
+                        <img src="img/ermitag1-1536x762.jpg" alt="Эрмитаж">
+                        <span class="card-number">05</span>
+                    </div>
+                    <div class="landmark-card-content">
+                        <h3>Эрмитаж</h3>
+                        <p>Один из крупнейших художественных музеев мира, основанный в 1764 году Екатериной II. Ансамбль включает Зимний дворец Растрелли, Малый, Старый и Новый Эрмитаж. Портик Нового Эрмитажа украшают знаменитые гранитные атланты.</p>
+                    </div>
+                </article>
+                </a>
+
+                <a href="pages/palace.html" class="landmark-card-link reveal reveal-d3">
+                <article class="landmark-card">
+                    <div class="card-img-wrap">
+                        <img src="img/5624382538.jpg" alt="Дворцовая площадь, Александровская колонна">
+                        <span class="card-number">06</span>
+                    </div>
+                    <div class="landmark-card-content">
+                        <h3>Дворцовая площадь</h3>
+                        <p>Главный парадный ансамбль города с триумфальной аркой Главного штаба Карла Росси. В центре — Александровская колонна Монферрана: 600-тонный гранитный монолит, удерживающийся на пьедестале силой собственного веса.</p>
+                    </div>
+                </article>
+                </a>
+
+                <a href="pages/singer.html" class="landmark-card-link reveal reveal-d1">
+                <article class="landmark-card">
+                    <div class="card-img-wrap">
+                        <img src="img/Singer_House_SPB_01.jpg" alt="Дом Зингер">
+                        <span class="card-number">07</span>
+                    </div>
+                    <div class="landmark-card-content">
+                        <h3>Дом Зингер</h3>
+                        <p>Шедевр эпохи модерна на Невском проспекте, возведённый в 1904 году по проекту Павла Сюзора для американской швейной компании. Башню венчает стеклянный глобус. После революции здание стало знаменитым Домом книги.</p>
+                    </div>
+                </article>
+                </a>
+
+                <a href="pages/kazan.html" class="landmark-card-link reveal reveal-d2">
+                <article class="landmark-card">
+                    <div class="card-img-wrap">
+                        <img src="img/Kazan-cathedral-50001.jpg" alt="Казанский собор">
+                        <span class="card-number">08</span>
+                    </div>
+                    <div class="landmark-card-content">
+                        <h3>Казанский собор</h3>
+                        <p>Кафедральный храм, построенный в 1801–1811 годах архитектором Андреем Воронихиным из местного пудостского камня. Грандиозная колоннада из 96 колонн раскрыта к Невскому проспекту. Здесь покоится прах фельдмаршала Кутузова.</p>
+                    </div>
+                </article>
+                </a>
+
+                <a href="pages/lomonosova.html" class="landmark-card-link reveal reveal-d3">
+                <article class="landmark-card">
+                    <div class="card-img-wrap">
+                        <img src="img/p8272.jpg" alt="Ломоносова, 9">
+                        <span class="card-number">09</span>
+                    </div>
+                    <div class="landmark-card-content">
+                        <h3>Ломоносова, 9</h3>
+                        <p>Историческое здание Императорского коммерческого училища, построенное в 1869–1871 годах в стиле неоренессанса. Центральный объём выделен залом бывшей домовой церкви. Ныне здесь располагается корпус Университета ИТМО.</p>
+                    </div>
+                </article>
+                </a>
+
+            </div>
+        </section>
+    </div>
+
+
+    <footer id="authors">
+        <div class="container">
+            <h2 class="authors-title">Над проектом работали</h2>
+            <div class="ornament" style="margin-bottom: 0;">
+                <div class="ornament-diamond"></div>
+            </div>
+
+            <div class="authors-grid">
+                <div class="author-item">
+                    <span class="author-name">Лузин Максим Владимирович</span>
+                    <span class="author-id">466541</span>
+                </div>
+                <div class="author-item">
+                    <span class="author-name">Аверьянова Ксения Денисовна</span>
+                    <span class="author-id">502805</span>
+                </div>
+                <div class="author-item">
+                    <span class="author-name">Аргунова Арина Ринатовна</span>
+                    <span class="author-id">465039</span>
+                </div>
+                <div class="author-item">
+                    <span class="author-name">Олесина Мария Александровна</span>
+                    <span class="author-id">502361</span>
+                </div>
+                <div class="author-item">
+                    <span class="author-name">Корсунский Максим Константинович</span>
+                    <span class="author-id">466297</span>
+                </div>
+                <div class="author-item">
+                    <span class="author-name">Провоторов Арсений Игоревич</span>
+                    <span class="author-id">467181</span>
+                </div>
+                <div class="author-item">
+                    <span class="author-name">Абаянцева Евгения Юрьевна</span>
+                    <span class="author-id">327004</span>
+                </div>
+                <div class="author-item">
+                    <span class="author-name">Розыкулыев Дидар</span>
+                    <span class="author-id">511489</span>
+                </div>
+                <div class="author-item">
+                    <span class="author-name">Гращенков Арсений Дмитриевич</span>
+                    <span class="author-id">501571</span>
+                </div>
+                <div class="author-item">
+                    <span class="author-name">Белкин Святослав Викторович</span>
+                    <span class="author-id">465184</span>
+                </div>
+            </div>
+
+            <p class="copyright">&copy; 2026 Университет ИТМО</p>
+        </div>
+    </footer>
+
+    <script>
+        function playTrack(audioPath, buttonElement) {
+            const player = document.getElementById('audio-player');
+            const source = document.getElementById('audio-source');
+
+            source.src = audioPath;
+            player.load();
+            player.play();
+
+            document.querySelectorAll('.time-link').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.timeline-item').forEach(item => item.classList.remove('active-track'));
+
+            buttonElement.classList.add('active');
+            buttonElement.closest('.timeline-item').classList.add('active-track');
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
